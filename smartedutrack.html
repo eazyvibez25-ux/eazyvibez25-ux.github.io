@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SmartEduTrack Case Study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="SmartEduTrack, a QR code and geofencing attendance system built with React, Node.js/Express and MongoDB by Michael Edwin Panama.">
+<link rel="canonical" href="https://eazyvibez25-ux.github.io/smartedutrack.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SmartEduTrack | Michael Edwin Panama">
+<meta property="og:description" content="A QR code and geofencing attendance system: case study, screenshots and live demo.">
+<meta property="og:url" content="https://eazyvibez25-ux.github.io/smartedutrack.html">
+<meta property="og:image" content="https://eazyvibez25-ux.github.io/set-lecturer-session.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1.5 7 5-2.5 5 2.5-1.5-7"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-bbox" viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><rect x="8" y="8" width="8" height="8" rx="1"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M13.5 6l-3 12"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><rect x="8" y="6" width="8" height="13" rx="4"/><path d="M12 10v9M4 13h4M16 13h4M5 7l3 2M19 7l-3 2M5 19l3-2M19 19l-3-2"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="7" rx="1.5"/><rect x="4" y="13" width="16" height="7" rx="1.5"/><path d="M8 7.5h.01M8 16.5h.01"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+</svg>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="michael-avatar.jpg" alt="" width="36" height="36"><span class="brand-name">M.E. <b>Panama</b></span></a>
+    <a class="nav-back" href="index.html#projects"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg>Portfolio</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="cs-hero">
+    <div class="container narrow">
+      <div class="tags"><span class="tag solid">Case study</span><span class="tag live"><span class="dot" aria-hidden="true"></span>Live on Render</span></div>
+      <h1><span class="hl">SmartEduTrack</span></h1>
+      <p class="role">QR code and geofencing attendance system</p>
+      <dl class="card facts">
+        <div><dt>Type</dt><dd>Final year project, BSc Computer Science</dd></div>
+        <div><dt>Completed</dt><dd>October 2026</dd></div>
+        <div><dt>My role</dt><dd>Sole developer</dd></div>
+        <div><dt>Stack</dt><dd>React, Node.js/Express, MongoDB</dd></div>
+      </dl>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://smart-attendance-system-5cyu.onrender.com" target="_blank" rel="noopener">Open live demo <svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a>
+        <a class="btn btn-outline" href="https://github.com/ediboy-dev/smart-attendance-system" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Source code</a>
+      </div>
+      <figure class="cs-figure">
+        <img src="set-lecturer-session.jpg" alt="Lecturer screen with an active CSC 311 session, a session ID and a QR code that refreshes every few seconds" width="1200" height="738">
+        <figcaption>The lecturer's session screen. The QR code refreshes every few seconds. Screenshots use demo accounts.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="container narrow">
+    <section class="cs-section" aria-labelledby="overview-title">
+      <h2 id="overview-title">Overview</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <p>SmartEduTrack records class attendance from students' phones. A student is only marked present after scanning the code shown in class while their phone is inside the lecture venue. Lecturers and administrators see the results in attendance reports.</p>
+    </section>
+
+    <section class="cs-section" aria-labelledby="problem-title">
+      <h2 id="problem-title">The problem</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <p>Paper attendance is slow in large classes, and it is easy for one student to sign in for a friend who is not there. A plain QR code has the same weakness, because a photo of it can be sent to someone outside the room. The system needed to check two things at once: that the student has the current code, and that they are physically in class.</p>
+    </section>
+
+    <section class="cs-section" aria-labelledby="role-title">
+      <h2 id="role-title">What I built</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <p>I built the whole system on my own: the React interface for all three user roles, the Node.js and Express API, the MongoDB data model, login and access control, offline support, testing and deployment.</p>
+    </section>
+
+    <section class="cs-section" aria-labelledby="flow-title">
+      <h2 id="flow-title">How attendance is recorded</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <ol class="steps">
+        <li><p>The lecturer starts a session for a course. The app shows a QR code that refreshes every few seconds, along with a session ID.</p></li>
+        <li><p>The student opens Scan Attendance on their phone, enters the session ID and scans the code.</p></li>
+        <li><p>The phone's GPS position is checked against the geofence around the lecture venue, so a scan from outside the room is not accepted.</p></li>
+        <li><p>The attendance is saved and appears in the student's record, the lecturer's course report and the administrator's dashboard.</p></li>
+      </ol>
+      <p class="note"><svg class="i" aria-hidden="true"><use href="#i-wifi"/></svg><span>If the student's phone has no internet connection, the attendance is stored on the device and sent automatically once it is back online.</span></p>
+    </section>
+
+    <section class="cs-section" aria-labelledby="roles-title">
+      <h2 id="roles-title">Three roles, three views</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <div class="roles">
+        <div class="card role-block">
+          <div>
+            <span class="tag solid">Student</span>
+            <ul class="ticks">
+              <li>Scans attendance with the session ID and QR code.</li>
+              <li>Registers for courses.</li>
+              <li>Sees their own attendance per course, with a percentage and status.</li>
+            </ul>
+          </div>
+          <div class="role-shots">
+            <button class="zoom" type="button"><img src="set-student-scan.jpg" alt="Student Scan Attendance screen on a phone, showing Attendance marked successfully" width="700" height="799" loading="lazy"></button>
+            <button class="zoom" type="button"><img src="set-student-attendance.jpg" alt="Student My Attendance screen on a phone, showing CSC 311 at 100 percent with Good status" width="700" height="799" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="card role-block">
+          <div>
+            <span class="tag solid">Lecturer</span>
+            <ul class="ticks">
+              <li>Starts and ends attendance sessions for a course.</li>
+              <li>Shows a QR code that refreshes automatically.</li>
+              <li>Loads a course report with each student's matric number, sessions attended and percentage.</li>
+            </ul>
+          </div>
+          <div class="role-shots single">
+            <button class="zoom" type="button"><img src="set-lecturer-report.jpg" alt="Lecturer Course Attendance Report for CSC 311 listing Student 1 with 100 percent attendance" width="1200" height="738" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="card role-block">
+          <div>
+            <span class="tag solid">Administrator</span>
+            <ul class="ticks">
+              <li>Sees attendance across the whole faculty, filtered by department and level.</li>
+              <li>Gets a count of student-course records below 75%, flagged as at risk.</li>
+              <li>Manages the list of courses.</li>
+            </ul>
+          </div>
+          <div class="role-shots single">
+            <button class="zoom" type="button"><img src="set-admin-dashboard.jpg" alt="Administrator Faculty-Wide Attendance Dashboard with department and level filters and an at-risk count below 75 percent" width="1200" height="738" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="card role-block">
+          <div>
+            <span class="tag solid">All roles</span>
+            <ul class="ticks">
+              <li>One login page for every role. JWT tokens decide which views each user can open.</li>
+              <li>New students can register themselves.</li>
+            </ul>
+          </div>
+          <div class="role-shots single">
+            <button class="zoom" type="button"><img src="set-login.jpg" alt="Attendance System login page with email and password fields and a link to register as a student" width="1200" height="738" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="tech-title">
+      <h2 id="tech-title">Technology</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <dl class="tech">
+        <div><dt>React</dt><dd>The interface for students, lecturers and administrators.</dd></div>
+        <div><dt>Node.js + Express</dt><dd>The REST API behind sessions, scans, courses and reports.</dd></div>
+        <div><dt>MongoDB</dt><dd>Stores users, courses, sessions and attendance records.</dd></div>
+        <div><dt>JWT</dt><dd>Login and role-based access for the three user types.</dd></div>
+        <div><dt>IndexedDB + Dexie.js</dt><dd>Holds scans on the phone while it is offline, then syncs them.</dd></div>
+        <div><dt>Render</dt><dd>Hosts the live demo.</dd></div>
+      </dl>
+    </section>
+
+    <section class="cs-section" aria-labelledby="testing-title">
+      <h2 id="testing-title">Testing and deployment</h2>
+      <span class="underline" aria-hidden="true"></span>
+      <p>I tested the backend end to end with Postman. The system is deployed on Render, where the live demo runs, and the full source code is public on GitHub.</p>
+    </section>
+
+    <div class="cs-end">
+      <h2>See SmartEduTrack working</h2>
+      <p>Try the live system yourself, or read the code behind it.</p>
+      <div class="btn-row">
+        <a class="btn btn-white" href="https://smart-attendance-system-5cyu.onrender.com" target="_blank" rel="noopener">Open live demo <svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a>
+        <a class="btn btn-ghost-light" href="https://github.com/ediboy-dev/smart-attendance-system" target="_blank" rel="noopener">View source code</a>
+        <a class="btn btn-ghost-light" href="index.html#contact">Contact Michael</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container narrow">
+    <span>&copy; <span data-year>2026</span> Michael Edwin Panama. All rights reserved.</span>
+    <nav aria-label="Footer"><a href="index.html">Portfolio</a><a href="index.html#contact">Contact</a></nav>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+  <div class="lb-bar"><span class="lb-caption"></span><button class="lb-close" type="button">Close</button></div>
+  <img alt="">
+</dialog>
+
+<script src="main.js" defer></script>
+</body>
+</html>
